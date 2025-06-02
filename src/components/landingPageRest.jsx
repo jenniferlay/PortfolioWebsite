@@ -1,6 +1,5 @@
 import FeaturedProjectsCard from "./featProjCardComp"
 import leetbotIMG from "../assets/LEETBOTIMG.png"
-import TMRUNIMG from "../assets/TMRUNIMG.png"
 
 export default function LandingPageRestComp(){
 
@@ -11,33 +10,30 @@ export default function LandingPageRestComp(){
             name: "LeetBot"
         },
         {
-            img: TMRUNIMG,
-            link: "https://tmrun-1.onrender.com/",
-            name: "TMRUN"
+            img: "./skinmatch.png",
+            link: "https://skinmatch.onrender.com/",
+            name: "SkinMatch"
         },
         {
-            img: "./homeRate.png",
-            link: "https://rateto-frontend.onrender.com/",
-            name: "RateTo"
+            img: "./lesseats.png",
+            link: "https://github.com/shadmansohel04/LessEats",
+            name: "LessEats"
         }
     
     ]
 
     return(
         <section id="pageSetup" className="landingPageContainer">
-            <h1>ABOUT ME</h1>
+            <h1>About Me</h1>
             <div className="aboutMeContainer">
                 {/* PROBABLY PUTTING AN IMAGE HERE */}
-                <p>I’m a Computer Engineering student at TMU and a passionate full-stack developer with a 
-                    knack for building scalable, efficient, and user-centric solutions. I enjoy navigating 
-                    the challenges of both front-end and back-end development, leveraging my skills to 
-                    create impactful applications. I’m always eager to connect with fellow tech enthusiasts, 
-                    explore innovative ideas, and embrace opportunities to grow while making meaningful 
-                    contributions to the field.</p>
+                <p>Hey! My name is Jennifer. I'm a third year Computer Engineering student at Toronto Metropolitan University. 
+                Previously, I have gained experience in automotive and project management roles. 
+                In the future, I am interested in continuing to explore more opportunities in Software Development.</p>
             </div>
             
             <div className="featuredProjects">
-                <h1>FEATURED PROJECTS</h1>
+                <h1>Featured Projects</h1>
                 <div className="projectsContainer">
                     {/* WILL CREATE CUSTOM COMPONNET FOR PROJECT */}
                     {projArray.map((each, index)=>{

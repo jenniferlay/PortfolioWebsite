@@ -1,0 +1,154 @@
+.card {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.5s ease;
+  color: white;
+}
+
+
+
+/* Face1: Main content */
+.card .face.face1 {
+  position: relative;
+  z-index: 0; /* Normally abov1e face2 */
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  opacity: 0.2;
+  pointer-events: none;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: opacity 0.5s ease;
+}
+
+/* Dim or hide content when card is active */
+.card.active .face.face1 {
+  z-index: 0;       /* Push it behind face2 */
+  opacity: 0.2;     /* Optional: make it faded or set to 0 to hide */
+  pointer-events: none; /* Avoid accidental clicks underneath */
+}
+
+.card:hover .face.face1{
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.card .face.face1 h2 {
+  margin: 0;
+  padding: 0;
+
+}
+
+.card .face.face1 .content {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 1em;
+  font-weight: 500;
+}
+
+
+/* Face2: Bottom bar with title */
+.card .face.face2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 15px 15px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 
+    height 0.5s ease,
+    border-radius 0.5s ease,
+    z-index 0.5s ease;
+}
+
+/* Bring face2 to top when active */
+.card.active .face.face2 {
+  height: 60px;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.card:hover .face.face2{
+  height: 60px;
+  z-index: 2;
+  border-radius: 0 0 15px 15px;
+}
+
+.card .face.face2 h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: font-size 0.5s ease;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Text grows on active */
+.card.active .face.face2 h2 {
+  font-size: 5rem;
+}
+
+.card:hover .face.face2 h2{
+  font-size: 2rem;
+  
+}
+
+.content{
+  position: relative;
+}
+
+.content h2{
+  font-size: 1.7rem;
+}
+
+.content p{
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.linksProj{
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 0;
+  height: 4rem;
+}
+
+.linksProj a{
+  height: 100%;
+  margin-left: 1rem;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  transition: all 0.2s ease-in;
+}
+
+.linksProj a:hover{
+  background-color: rgb(30, 48, 75);
+}
+
+.linksProj a img{
+  height: 3rem;
+}

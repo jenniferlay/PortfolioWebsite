@@ -14,9 +14,11 @@
     background-color: white;
 }
 
-.resumePage h1{
+.WorkCompWrapper h1{
     font-size: 13rem;
     align-self: inherit;
+    font-family: "Barlow Condensed", sans-serif;
+
     margin-bottom: 100px;
 }
 
@@ -116,6 +118,8 @@
 .animateJob{
     opacity: 1;
 }
+
+
 
 @media (max-width:768px) {
     .resumePage .bigTitle{

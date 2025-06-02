@@ -39,7 +39,7 @@ export default function ContactContent() {
   return (
     <section id="pageSetup" className="contactPage">
       <h1 className="bigTitle">
-        {"CONTACT".split("").map((letter, index) => (
+        {"Contact".split("").map((letter, index) => (
           <span
             className="letterAnimation"
             key={`resume-${index}`}
@@ -51,7 +51,7 @@ export default function ContactContent() {
       </h1>
 
       <form onSubmit={clicker} className="contactForm">
-        <h2>Shoot me a message!</h2>
+        <h2>Send me an email!</h2>
         <div className="rightForm">
           <h3>Name</h3>
           <input

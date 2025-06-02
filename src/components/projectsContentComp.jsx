@@ -1,11 +1,11 @@
 import "../styles/projectsPage.css"
-import ProjectTileCompPage from "./projectsTileCompPage"
+import ProjectTileCompPage from "./projectsTileCompPage.jsx"
 
 export default function ProjectsContent(){
 
     const projects = [
         {
-            img: "./GAME.png",
+            img: "./leetbotpic2.png",
             link: "https://leetcodebot-gumy.onrender.com/",
             name: "LeetBot",
             github: "https://github.com/shadmansohel04/LeetcodeBot",
@@ -20,9 +20,9 @@ export default function ProjectsContent(){
             desc: "LeetBot, the first-place winner at Ignitian Hacks 2024, is a multiplayer PvP game based on LeetCode stats. Built with a Python Flask backend, Socket.io for real-time interactions, and a React.js frontend styled with NES.CSS, it integrates Mistral AI for unique usernames and the LeetCode GraphQL API to track player stats. Refined post-hackathon, LeetBot is now live—grab a friend and play!"
         },
         {
-            img: "./TMRUN.png",
-            link: "https://tmrun-1.onrender.com/",
-            name: "TMRUN",
+            img: "./skinmatch.png",
+            link: "https://skinmatch.onrender.com/",
+            name: "SkinMatch",
             github: "https://github.com/shadmansohel04/TMRUN_FRONTEND",
             tech:[
                 "ReactJS",
@@ -31,13 +31,13 @@ export default function ProjectsContent(){
                 "ExpressJS",
                 "CSS"
             ],
-            desc: "TMRUN is a web app offering fresh metrics for runners of all levels, focusing on factors like consistency and elevation rather than just pace and time. Built with Node.js, Express, MongoDB, and React, it's hosted on Render and integrates Strava's API for real-time scores and a global leaderboard to inspire progress and community."
+            desc: " SkinMatch is a full-stack web application built with Flask, React.js, and PostgreSQL. I developed a backend API using Python and Flask to manage server-side functionality and product classification algorithms, based on user input from a dynamically generated skincare quiz. SkinMatch delivers personalized skincare recommendations, empowering users to make smarter beauty choices and transforming how they discover skincare products. Get started today"
         },
         {
-            img: "./RATETO.png",
-            link: "https://rateto-frontend.onrender.com/",
-            name: "RateTo",
-            github: "https://github.com/shadmansohel04/RateTO_Frontend",
+            img: "./dearDiary.png",
+            // link: "https://rateto-frontend.onrender.com/",
+            name: "Dear Diary",
+            // github: "https://github.com/shadmansohel04/RateTO_Frontend",
             tech:[
                 "ReactJS",
                 "Flask",
@@ -45,35 +45,24 @@ export default function ProjectsContent(){
                 "React Leaflet",
                 "CSS"
             ],
-            desc: "RateTO is a fullstack project providing Torontonians with localized crime, park, and transportation scores using OpenData Toronto. Built with Python (Flask) and ReactJS, it’s my tribute to Toronto, where I study and grew up in the GTA."
+            desc: "DearDiary is a voice journaling application powered by the Seeed Studio XIAO nRF52840 Sense, Python, and Google Cloud. I developed a backend API using Python to capture audio through the onboard microphone and transcribe it using the Google Speech-to-Text API. The transcribed text is then automatically written to a Google doc via the Google Docs API."
         },
         {
-            img: "./MORNING.jpg",
-            name: "Good Morning",
-            github: "https://github.com/shadmansohel04/Daily-Morning-Text-message",
+            img: "./lesseats.png",
+            name: "LessEats",
+            github: "https://github.com/jenniferlay/LessEats",
             tech:[
                 "Python",
                 "AWS EC2 Instance"
             ],
-            desc: "I created a Python script that automates daily SMS updates with location-based weather forecasts and commute times. Using Twilio, Google Maps, and OpenWeather APIs, it retrieves real-time data on traffic and weather, sending personalized updates each morning to streamline daily planning."
-        },
-        {
-            img: "./ANXIETY.png",
-            name: "Anxiety Game",
-            github: "https://github.com/shadmansohel04/AnxiousGame/tree/master",
-            tech:[
-                "Java",
-                "JavaFX",
-                "Object Oriented Programming"
-            ],
-            desc: "Anxiety is a local PvP game built with Java and JavaFX, leveraging object-oriented programming principles. It challenges players with strategic decision-making, testing their ability to think critically and adapt in real-time competition."
+            desc: "A full-stack food ordering simulation using Java microservices deployed on Apache Tomcat, featuring REST APIs for user management, restaurant menus, order processing, and payments."
         }
     ]
 
     return(
         <section id="pageSetup" className="projectsPage">
             <h1 className="bigTitle">
-                {"PROJECTS".split("").map((letter, index)=>{
+                {"Projects".split("").map((letter, index)=>{
                     return(
                         <span
                             className="letterAnimation"

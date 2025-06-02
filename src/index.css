@@ -21,7 +21,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   /* background-color: rgb(18, 18, 18); */
-  background: linear-gradient(0deg, black, rgb(0, 29, 0), black);
+  background: linear-gradient(0deg, black, rgb(14, 27, 46), black);
   background-size: 400% 400%;
   animation: gradient 5s ease-in-out infinite;
   background-color: black;

@@ -1,51 +1,38 @@
-import { useState } from "react"
+import { useState } from "react";
+import "../styles/projectTile.css";
 
-export default function ProjectTileCompPage(props){
-    const [click, setClick] = useState(true)
+export default function ProjectTileCompPage(props) {
+  const [isActive, setIsActive] = useState(false);
 
-    const [hover, setHover] = useState({
-        imgWidth: "100%",
-        navHeight: "0%",
-        imgHeight: "100%"
-    })
+  const toggleCard = () => {
+    setIsActive(!isActive);
+  };
 
-    const enter = ()=>{
-        setHover({
-            imgWidth: "110%",
-            navHeight: "15%",
-            imgHeight: "120%"
-        })
-    }
-
-    const leave = ()=>{
-        setHover({
-            imgWidth: "100%",
-            navHeight: "0%",
-            imgHeight: "100%"
-        })
-    }
-
-    // DO THE ONCLICK FOR THE WHOLE THING
-
-    return(
-        <div onClick={() =>{setClick((prev)=> !prev)}} onMouseEnter={enter} onMouseLeave={leave} href={props.link} className="projectPageTileComp">
-            <h1>{props.name}</h1>
-            <img style={{width: hover.imgWidth, height: hover.imgHeight}} src={props.img} alt="img" />
-            <ul style={{height: hover.navHeight}} className="openingBottom">
-                <li><a href={props.github}><img src="https://img.icons8.com/m_rounded/512/FFFFFF/github.png" alt="gitHub" /></a></li>
-                {props.link?<li> <a href={props.link}><img src="./OPEN.png" alt="linkImg" /></a></li>: null}
-                {props.devpost?<li> <a href={props.devpost}>D</a></li>: null}
-            </ul>
-            <div className={click? "onclickTile": "onclickTile openClick"}>
-                <h2>Technolagies</h2>
-                <ul>
-                    {props.tech.map((each, index)=>{
-                        return(<li key={index}>{each}</li>)
-                    })}
-                </ul>
-                <h2>Description</h2>
-                <p>{props.desc}</p>
+  return (
+    <div className="projectTileContainer">
+      <div className="card" onMouseEnter={() => setIsActive(true)} onMouseLeave={() => setIsActive(false)}>
+        <div className="face face1">
+          <div className="content">
+            <h2>Description</h2>
+            <p>{props.desc}</p>
+            {/* <h2>Technologies</h2> */}
+            <div className="linksProj">
+              {props.github? <a href={props.github}> <img src="https://img.icons8.com/m_rounded/512/FFFFFF/github.png" alt=""/></a>: null}
+              {props.link? <a href={props.link}> <img src="./OPEN.png" alt="" /></a>: null}
+              {props.devpost? <a href={props.devpost}> <img src="https://img.icons8.com/androidL/512/FFFFFF/devpost.png" alt="" /></a>: null}
             </div>
+          </div>
         </div>
-    )
+        <div className="face face2"
+          style ={{
+            backgroundImage: `url(${props.img})`,
+            backgroundSize: `cover`,
+            backgroundPosition: 'center'
+          }}
+        >
+          <h2>{props.name}</h2>
+        </div>
+      </div>
+    </div>
+  );
 }

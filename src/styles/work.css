@@ -1,0 +1,79 @@
+.WorkCompWrapper{
+    margin-bottom: 10%;
+}
+
+.WorkCompWrapper h1{
+    text-align: center;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.vertical-timeline-element-title{
+    font-size: 1.5rem;
+    font-family: "DM Sans", serif;
+    font-weight: 500;
+}
+
+.vertical-timeline-element-subtitle{
+    color: white;
+    margin-bottom: 5px;
+}
+
+.vertical-timeline-element--work li{
+    font-weight: 200;
+}
+
+.vertical-timeline::before{
+    background: white;
+    width: 1px;
+}
+
+.vertical-timeline-element-content{
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+.bigTitle{
+    font-size: 13rem;
+    /* TEMPORARY SMALLER BC OF PLANE */
+    /* font-size: 8rem; */
+    /* font-family: "Barlow Condensed", sans-serif; */
+    font-optical-sizing: auto;  
+    text-align: left;
+    align-self: flex-start;
+}
+
+.letterAnimation{
+    font-size: inherit;
+    font-family: inherit;
+    font-optical-sizing: auto;
+    display: inline-block;
+    animation-name: bounceInBottom;
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    font-weight: 500;
+}
+
+@keyframes bounceInBottom {
+    0% {
+        transform: translate3d(0, 300%, 0);
+        opacity: 0;
+    }
+    58% {
+        transform: translate3d(0, -27px, 0);
+        opacity: 1;
+    }
+    73% {
+        transform: translate3d(0, 12px, 0);
+    }
+    88% {
+        transform: translate3d(0, -8px, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}

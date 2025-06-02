@@ -35,16 +35,16 @@ export default function HeaderComp() {
                 </div>
             </div>
 
-            <h1><a href="/">Shad</a></h1>
+            <h1><a href="/">Jenn</a></h1>
 
-            <a href="https://www.linkedin.com/in/shadman-sohel/" className="connectButton">Connect</a>
+            {/* <a href="https://www.linkedin.com/in/shadman-sohel/" className="connectButton">Connect</a> */}
 
             <div className={showDesk? "openNavDesk": "openNavDesk showNavDesktop"}>
                 <ul className={showDesk? "noList": "noList listAnimate"}>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/resume">RESUME</a></li>
-                    <li><a href="/projects">PROJECTS</a></li>
-                    <li><a href="/contact">CONTACT</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/resume">Resume</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </div>
 

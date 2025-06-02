@@ -1,82 +1,115 @@
-import { useState } from "react"
-import { useEffect } from "react"
-import JobTileComp from "./jobTileRes"
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import '../styles/work.css'
+import "../styles/resume.css"
 
 export default function ResumeContent(){
-
-    const [yval, setYval] = useState(0)
-
-    const handleScroll = ()=>{
-        setYval(window.scrollY)
-    }
-
-    useEffect(()=>{
-        window.addEventListener("scroll", handleScroll)
-    })
-
-    const jobContent = [
-        {
-            title: "Software Developer Intern",
-            year: "2024-2025",
-            company: "RaiseIt",
-            blurb: "Develop secure server-side services using Express and Node.js with JWT-based authentication. Utilize MongoDB for efficient data management and querying, ensuring sub-50ms response times to support a team of 10. Apply Python libraries like BeautifulSoup and Selenium to automate workflows by extracting, cleaning, and analyzing data from 100+ web pages, delivering insights 20% faster."
-        },
-        {
-            title: "Project Manager",
-            year: "2024",
-            company: "Toronto Metropolitan University",
-            blurb: "Mentored 95 first-year engineering students by overseeing assignments and facilitating communication through emails and meetings. Evaluated assignments, supported students with engineering concepts and MATLAB, and ensured comprehension. Promoted effective teamwork, resolved conflicts, and monitored collaboration to achieve successful project outcomes."
-        },
-        {
-            title: "Academic Initiatives",
-            year: "2024",
-            company: "Toronto Metropolitan University",
-            blurb: "Supplied academic advice for over 1,000 first-year engineering students. Enhanced AI chatbot performance with PyTorch by implementing NLP preprocessing techniques like tokenization, stemming, and stop-word removal, improving query response accuracy. Conducted research and data analysis to produce 10+ reports supporting best practices for new advising resources."
-        },
-        {
-            title: "Administrative Assistant",
-            year: "2023",
-            company: "Elevation Athletics",
-            blurb: "Expanded the main website with staff pages and registration forms. Managed sensitive data across 10+ spreadsheets, delivered weekly updates, and coordinated with teams to organize games for athletes aged 14-19. Scheduled and participated in meetings to plan future activities across departments."
-        },
-        {
-            title: "Operations Supervisor",
-            year: "2022-2023",
-            company: "York Region Basketball League",
-            blurb: "Scheduled and lead meetings for 5-10 senior leadership team members across the Greater Toronto Area. Coordinated with vendors and team representatives to create monthly mini tournaments and weekly regular season games. Oversaw 4-8 employees and volunteers while ensuring games proceeded on schedule."
-        },
-        {
-            title: "Camp Councelor",
-            year: "2022",
-            company: "Elavation Athletics",
-            blurb: "Supervised 350-500 campers ages 5-14 during a six week basketball and multisport camp. Organized and led a variety of indoor and outdoor events including drills, games and exercises. Collaborated with counsellor team to create a welcoming, engaging, and memorable environment. Achieved certification in CPR and First Aid to ensure the safety for all campers. Wrote daily reports, evaluations and maintained back office administration."
-        }
-    ]
-    
-    return(
-        <section id="pageSetup" className="resumePage">
-            <h1 className="bigTitle">
-                {"RESUME".split("").map((letter, index) => (
+    return (
+        <div className="WorkCompWrapper">
+        
+          <h1 className="bigTitle">
+                    {"Resume".split("").map((letter, index) => (
                         <span
                             className="letterAnimation"
-                            key={`resume-${index}`}
+                            key={`shadman-${index}`}
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             {letter}
                         </span>
                     ))}
-            </h1>
+          </h1>
 
-            <h2>WORK EXPERIENCE</h2>
 
-            <div className="jobContainer">
-                <div className="middleLine"></div>
-                {jobContent.map((each, index)=>{
-                    return(
-                        <JobTileComp yval={yval} year={each.year} key={index} index={index} title={each.title} blurb={each.blurb} company={each.company} />
-                    )
-                })}
-            </div>
-        </section>
+        <VerticalTimeline>
+           <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgba(113, 123, 138, 0.43)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  rgba(113, 123, 138, 0.43)' }}
+            date="April 2025 - Present"
+            iconStyle={{ background: 'rgba(63, 89, 127, 0.32)', color: '#fff' }}
+            icon={<img src="/opg.png" alt="opg icon" style={{ width: "100%", height: "100%", borderRadius: "50%" }} />}
+            >
+            <h3 className="vertical-timeline-element-title">Professional Engineering Year Intern </h3>
+            <h4 className="vertical-timeline-element-subtitle">Ontario Power Generation</h4>
+            {/* <ul>
+                <li> Leverage software tools such as  One-Eighty, CDK  and  MS Office (Excel)  to manage customer and vehicle information 
+                    databases, ensuring accuracy and enhancing data visualization for insights and process optimization. </li>
+                <li>Process 50 customer inquiries daily and manage financial transactions as a team member, using manufacturing system 
+                    knowledge to stock vehicles and assist with licensing trade dockets, ensuring timely service and customer satisfaction. </li>
+            </ul> */}
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgba(113, 123, 138, 0.43)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  rgba(113, 123, 138, 0.43)' }}
+            date="June 2024 - March 2025"
+            iconStyle={{ background: 'rgba(113, 123, 138, 0.43)', color: '#fff' }}
+            icon={<img src="/newroads.png" alt="newroads icon" style={{ width: "100%", height: "100%", borderRadius: "50%" }} />}
+            >
+            <h3 className="vertical-timeline-element-title">Administrative Receptionist</h3>
+            <h4 className="vertical-timeline-element-subtitle">NewRoads Honda</h4>
+            <ul>
+                <li> Leverage software tools such as  One-Eighty, CDK  and  MS Office (Excel)  to manage customer and vehicle information 
+                    databases, ensuring accuracy and enhancing data visualization for insights and process optimization. </li>
+                <li>Process 50 customer inquiries daily and manage financial transactions as a team member, using manufacturing system 
+                    knowledge to stock vehicles and assist with licensing trade dockets, ensuring timely service and customer satisfaction. </li>
+            </ul>
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgba(113, 123, 138, 0.43)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid rgba(113, 123, 138, 0.43) ' }}
+            date="September 2024- December 2024"
+            iconStyle={{ background: 'rgba(113, 123, 138, 0.43)', color: '#fff' }}
+            icon={<img src="/feas.png" alt="feas icon" style={{ width: "100%", height: "100%", borderRadius: "50%" }} />} // Replace with your own icon or SVG
+          >
+            <h3 className="vertical-timeline-element-title">Project Manager</h3>
+            <h4 className="vertical-timeline-element-subtitle">Faculty of Engineering and Architectural Sciences at TMU</h4>
+            <ul>
+                <li>Supervise 90 first-year engineering students, managing assignments and facilitating communication through emails and 
+                    effective weekly meetings, resulting in improved student engagement and a 20% improvement in project performance</li>
+                <li>Graded assignments and supported students in engineering principles and  MATLAB  through  Zoom  meetings, enhancing 
+                problem-solving skills while organizing resources for timely feedback and meeting commitments</li>
+            </ul>
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgba(113, 123, 138, 0.43)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  rgba(113, 123, 138, 0.43)' }}
+            date="May 2021 - May 2024"
+            iconStyle={{ background: 'rgba(113, 123, 138, 0.43)', color: '#fff' }}
+            icon={<img src="/AHR.png" alt="andy icon" style={{ width: "100%", height: "100%", borderRadius: "50%" }} />} // Replace with your own icon or SVG
+          >
+            <h3 className="vertical-timeline-element-title">Project Planning Specialist</h3>
+            <h4 className="vertical-timeline-element-subtitle">Andy's Home Renovation</h4>
+            <ul>
+            <li> Created customer-centric renovation designs, balancing specifications and budget constraints ensuring client satisfaction</li>
+            <li>Automated meeting scheduling and financial management for over 40 clients using  Python  and the  Excel API</li>
+            <li>Coordinated with suppliers and managed inventory to ensure timely availability of materials, optimizing resource allocation and supporting seamless project execution</li>
+            </ul>
+          </VerticalTimelineElement>
+  
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'rgba(113, 123, 138, 0.43)', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  rgba(113, 123, 138, 0.43)' }}
+            date="Jan 2022 - Mar 2022"
+            iconStyle={{ background: 'rgba(113, 123, 138, 0.43)', color: '#fff' }}
+            icon={<img src="/sunnybrook.png" alt="nweroads icon" style={{ width: "100%", height: "100%", borderRadius: "50%" }} />} // Replace with your own icon or SVG
+          >
+            <h3 className="vertical-timeline-element-title">Nursing Intern</h3>
+            <h4 className="vertical-timeline-element-subtitle">Sunnybrook Health Sciences Center</h4>
+            <ul>
+                <li>Collected information about patient vitals and documented them on Electronic Health Records while maintaining confidentiality. </li>
+                <li>Collaborated with members of the healthcare team to deliver patient-centered care.</li>
+                <li>Improved client health and safety by fall risk assessment tools, maintaining skin integrity, and monitoring vital signs. Deescalated difficult situations by non-threatening body language and debriefing techniques.</li>    
+            </ul>
+          </VerticalTimelineElement>
+          
+        </VerticalTimeline>
+      </div>
     )
 }

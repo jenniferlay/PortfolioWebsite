@@ -1,18 +1,100 @@
+/* body {
+  margin: 0;
+  padding: 0;
+  background: #262626;
+} */
+
 .footerComp{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 250px;
-    margin-bottom: 40px;
-    margin-top: 10px;
+    position: relative;
+    margin-bottom: 5%;
 }
 
-.footerComp a{
-    width: 50px;
-    height: 50px;
+.footerComp ul {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
 }
 
-.footerComp a img{
-    width: 100%;
-    height: 100%;
+.footerComp ul li {
+  list-style: none;
+}
+
+.footerComp ul li a {
+  width: 80px;
+  height: 80px;
+  background-color: #e7e7e7;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  /* border: 3px solid #ffffff; */
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.footerComp ul li a .icon,
+.footerComp ul li a .icon-img {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.footerComp ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.footerComp ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.footerComp ul li a:hover:before {
+  top: 0;
+}
+
+.footerComp ul li:nth-child(1) a:before {
+  background: #5366ab;
+}
+
+.footerComp ul li:nth-child(2) a:before {
+  background: #04528d;
+}
+
+.footerComp ul li:nth-child(3) a:before {
+  background: #61add6;
+}
+
+.footerComp ul li:nth-child(4) a:before {
+  background: #dd4b39;
+}
+
+.icon-img {
+  height: 50px;
+  width: 50px;
+  margin-top: 13px; /* center the image vertically inside the circle */
+  transition: transform 0.5s;
+  z-index: 3;
+}
+
+.footerComp ul li a:hover .icon-img {
+  transform: rotateY(360deg);
+  filter: brightness(0) invert(1);
 }
