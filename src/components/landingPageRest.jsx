@@ -16,7 +16,7 @@ export default function LandingPageRestComp(){
         },
         {
             img: "./lesseats.png",
-            link: "https://github.com/shadmansohel04/LessEats",
+            link: "https://github.com/jenniferlay/LessEats",
             name: "LessEats"
         }
     
