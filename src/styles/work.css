@@ -8,7 +8,7 @@
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
-    font-size: 4rem;
+    /* font-size: 4rem; */
 }
 
 .vertical-timeline-element-title{
@@ -37,10 +37,6 @@
 }
 
 .bigTitle{
-    font-size: 13rem;
-    /* TEMPORARY SMALLER BC OF PLANE */
-    /* font-size: 8rem; */
-    /* font-family: "Barlow Condensed", sans-serif; */
     font-optical-sizing: auto;  
     text-align: left;
     align-self: flex-start;

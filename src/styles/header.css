@@ -64,8 +64,8 @@ header h1{
     font-size: 3.5rem;
     position: absolute;
     top: 30px;
-    left: 50%;
-    /* transform: translateX(-50%); */
+    right: 50%;
+    transform: translateX(50%);
 }
 
 header h1 a{
@@ -167,6 +167,9 @@ header h1 a:hover{
 
     header h1{
         order: 1;
+        top: 15px;
+        right: 70px;        
+        /* transform: translateX(-50%); */
     }
 
     header .connectButton{

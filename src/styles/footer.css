@@ -1,12 +1,8 @@
-/* body {
-  margin: 0;
-  padding: 0;
-  background: #262626;
-} */
-
 .footerComp{
     position: relative;
     margin-bottom: 5%;
+    width: 100%;
+    min-height: 100px;
 }
 
 .footerComp ul {
@@ -97,4 +93,8 @@
 .footerComp ul li a:hover .icon-img {
   transform: rotateY(360deg);
   filter: brightness(0) invert(1);
+}
+
+@media(max-width:768px){
+
 }

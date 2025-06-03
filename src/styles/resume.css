@@ -15,7 +15,6 @@
 }
 
 .WorkCompWrapper h1{
-    font-size: 13rem;
     align-self: inherit;
     font-family: "Barlow Condensed", sans-serif;
 
@@ -138,6 +137,13 @@
 
     .middleLine{
         display: none;
+    }
+
+    .WorkCompWrapper h1{
+        align-self: inherit;
+        font-family: "Barlow Condensed", sans-serif;
+        margin-top: 30px;
+        margin-bottom: 40px;
     }
 }   
 

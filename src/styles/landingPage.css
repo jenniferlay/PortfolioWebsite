@@ -16,9 +16,8 @@
 }
 
 .bigTitle{
-    font-size: 13rem;
     /* TEMPORARY SMALLER BC OF PLANE */
-    /* font-size: 8rem; */
+    font-size: 13rem;
     font-family: "Barlow Condensed", sans-serif;
     font-optical-sizing: auto;  
     text-align: left;
