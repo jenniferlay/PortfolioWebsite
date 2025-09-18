@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/landingPage.css";
-import meImg from "../assets/me.jpeg"
+import meImg from "/profilepic.jpg"
 import { useEffect } from "react";
 import axios from "axios"
 
@@ -63,7 +63,7 @@ export default function LandingPageFace() {
             </div>
             <div className="profileContainer">
                 <img className="ProfilePic" src={meImg} alt="jennifer_Picture" />
-                <a onClick={()=>{window.open("./RESUME.pdf")}} className="connectButton">Resume</a>
+                <a onClick={()=>{window.open("./Resume - Jennifer Lay.pdf")}} className="connectButton">Resume</a>
             </div>
 
 

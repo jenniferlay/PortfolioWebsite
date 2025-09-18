@@ -37,7 +37,7 @@ export default function HeaderComp() {
 
             <h1><a href="/">Jenn</a></h1>
 
-            {/* <a href="https://www.linkedin.com/in/shadman-sohel/" className="connectButton">Connect</a> */}
+            <a href="https://www.linkedin.com/in/jennifer-lay/" className="connectButton">Connect</a>
 
             <div className={showDesk? "openNavDesk": "openNavDesk showNavDesktop"}>
                 <ul className={showDesk? "noList": "noList listAnimate"}>
@@ -45,6 +45,7 @@ export default function HeaderComp() {
                     <li><a href="/resume">Resume</a></li>
                     <li><a href="/projects">Projects</a></li>
                     <li><a href="/contact">Contact</a></li>
+
                 </ul>
             </div>
 

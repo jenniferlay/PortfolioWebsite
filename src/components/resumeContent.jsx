@@ -31,12 +31,11 @@ export default function ResumeContent(){
             >
             <h3 className="vertical-timeline-element-title">Professional Engineering Year Intern </h3>
             <h4 className="vertical-timeline-element-subtitle">Ontario Power Generation</h4>
-            {/* <ul>
-                <li> Leverage software tools such as  One-Eighty, CDK  and  MS Office (Excel)  to manage customer and vehicle information 
-                    databases, ensuring accuracy and enhancing data visualization for insights and process optimization. </li>
-                <li>Process 50 customer inquiries daily and manage financial transactions as a team member, using manufacturing system 
-                    knowledge to stock vehicles and assist with licensing trade dockets, ensuring timely service and customer satisfaction. </li>
-            </ul> */}
+            <ul>
+              <li>Developed a cloud-based web application for the Owners Engineering department to streamline database management and deliver interactive metrics on 2,500+ legislative documents, hosted on Azure with React.js, Flask, and SQL, improving performance by 98% and serving 30+ daily users.</li>
+              <li>Contributed to the development of AI-powered tools as an AI Ambassador, including a form input assistant for governance documents leveraging the internal large language model (ChatOPG) automating data entry.</li>
+              <li>Led oversight of design compliance for the Darlington New Nuclear Project, coordinating with stakeholders and vendors to ensure adherence to Canadian nuclear codes and regulatory requirements for licence approval.</li>
+            </ul>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement

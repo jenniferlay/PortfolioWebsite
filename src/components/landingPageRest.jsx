@@ -15,9 +15,9 @@ export default function LandingPageRestComp(){
             name: "SkinMatch"
         },
         {
-            img: "./lesseats.png",
-            link: "https://github.com/jenniferlay/LessEats",
-            name: "LessEats"
+            img: "./battlebites2.png",
+            link: "https://hackthe6repo.onrender.com/",
+            name: "BattleBites"
         }
     
     ]
@@ -27,9 +27,7 @@ export default function LandingPageRestComp(){
             <h1>About Me</h1>
             <div className="aboutMeContainer">
                 {/* PROBABLY PUTTING AN IMAGE HERE */}
-                <p>Hey! My name is Jennifer. I'm a third year Computer Engineering student at Toronto Metropolitan University. 
-                Previously, I have gained experience in automotive and project management roles. 
-                In the future, I am interested in continuing to explore more opportunities in Software Development.</p>
+                <p>I'm a Computer Engineering student at Toronto Metropolitan University with a strong passion for full-stack development. I love designing and building end-to-end applications that are efficient, scalable, and focused on the user experience. Whether it’s structuring a solid backend or crafting responsive interfaces, I enjoy problem-solving and creativity that come with both sides of development. I'm always looking to collaborate, learn from others, and contribute to projects that make a real impact.</p>
             </div>
             
             <div className="featuredProjects">
