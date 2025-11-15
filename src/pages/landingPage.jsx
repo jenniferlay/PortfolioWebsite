@@ -15,22 +15,20 @@ export default function LandingPage(){
       }, []);
       
     const sendVisitMessage = async () => {
-        const email = "BLANK@gmail.com";
+        const email = "JENN@gmail.com";
         const message = "JUST WENT ON";
         const subject = "I WONDER WHO?";
 
         try {
-            const response = await fetch("https://rateto-backend.onrender.com/contact", {
+            const response = await fetch("https://tmrun-h224.onrender.com/home/contact", {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    info: {
-                        email,
-                        message,
-                        subject
-                    },
+                    email,
+                    message,
+                    subject
                 }),
             });
         }
