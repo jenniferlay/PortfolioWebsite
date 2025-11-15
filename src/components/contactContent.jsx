@@ -11,17 +11,15 @@ export default function ContactContent() {
     event.preventDefault(); // Prevent the default form submission behavior
 
     try {
-      const response = await fetch("https://rateto-backend.onrender.com/contact", {
+      const response = await fetch("https://tmrun-h224.onrender.com/home/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          info:{
             email,
             message,
             subject: name,
-          }
         }),
       });
 
