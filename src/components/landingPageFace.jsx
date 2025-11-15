@@ -14,25 +14,26 @@ export default function LandingPageFace() {
         }
       }, []);
 
-    const sendVisitMessage= async()=>{
-        console.log("STARTED")
-        axios.post("https://rateto-backend.onrender.com/JENNIFER/contact",{
-            firstname: "new person",
-            lastname: "!!!!",
-            email: "blahblah@gmail.com",
-            phone: "phone",
-            msg: "somebody went on my website!!!"
-        }).then((response)=>{
-            if (response.data.success == true){
-                console.log("Message sent!")
-            }
-            else{
-                console.log(response.data.msg)
-            }
-        }).catch(()=>{
-            console.log("Something went wrong")
-        })
-    }
+    const sendVisitMessage = async () => {
+        const email = "JENN@gmail.com";
+        const message = "JUST WENT ON";
+        const subject = "I WONDER WHO?";
+
+        try {
+            const response = await fetch("https://tmrun-h224.onrender.com/home/contact", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email,
+                    message,
+                    subject
+                }),
+            });
+        }
+        catch (error) {}
+      };
    
     
     return (
